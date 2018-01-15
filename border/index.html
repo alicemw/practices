@@ -1,0 +1,58 @@
+﻿<html>
+	<head>
+		<title>dmeo</title>
+		<style type="text/css">
+			.demo {
+				width: 300px;
+				height: 300px;
+				margin: 50px auto;
+				background: deepskyblue;
+			}
+			.test {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				transition: all .4s ease-in-out;
+			}
+			.test:before,.test:after {
+				position: absolute;
+				top: 10%;
+				bottom: 10%;
+				left: 10%;
+				right: 10%;
+				opacity: 0;
+				content: "";
+				transition: all 0.4s ease-in-out;
+				transform-origin: 0 0;
+			}
+			
+			.test:before {
+				top: 20%;
+				bottom: 20%;
+				transform: scale(0,1);
+				border-bottom: 1px solid red;
+				border-top: 1px solid red;
+				
+			}
+			.test:after {
+				left: 20%;
+				right: 20%;
+				transform: scale(1,0);
+				border-left: 1px solid red;
+				border-right: 1px solid red;
+				
+			}
+			.demo:hover .test:before,.demo:hover .test:after {
+				transform: scale(1);
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			<div class="test">
+				just a test
+			</div>
+		</div>
+	</body>
+</html>
